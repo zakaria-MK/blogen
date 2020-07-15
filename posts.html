@@ -22,10 +22,10 @@
         <div class="navbar-collapse collapse" id="navbarCollapse">
           <ul class="navbar-nav ">
             <li class="navbar-item px-2">
-              <a href="index.html" class="nav-link active">Dashboard</a>
+              <a href="index.html" class="nav-link ">Dashboard</a>
             </li>
             <li class="navbar-item px-2">
-              <a href="posts.html" class="nav-link ">Posts</a>
+              <a href="posts.html" class="nav-link active">Posts</a>
             </li>
             <li class="navbar-item px-2">
               <a href="categories.html" class="nav-link ">Categories</a>
@@ -67,8 +67,8 @@
         <div class="row">
           <div class="col-md-6">
             <h1>
-              <i class="fas fa-cog"></i>
-              Dashboard
+              <i class="fas fa-pencil-alt"></i>
+              Posts
             </h1>
           </div>
         </div>
@@ -78,140 +78,24 @@
     <div id="action" class="bg-light py-4">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <a href="" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal">
-              <i class="fas fa-plus"></i>
-              Add Post
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal">
-              <i class="fas fa-plus"></i>
-              Add Category
-            </a>
-          </div>
-          <div class="col-md-3">
-            <a href="" class="btn btn-warning btn-block" data-toggle="modal" data-target="#addUserModal">
-              <i class="fas fa-plus"></i>
-              Add User
-            </a>
+          <div class="col-md-6 ml-auto">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Posts...">
+              <div class="input-group-append">
+                <button class="btn btn-primary">Search</button>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Post Modal -->
-    <div class="modal" id="addPostModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title">Add Post</h5>
-            <button class="close" data-dismiss="modal">
-              <span>
-                &times;
-              </span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="category">Category</label>
-                <select type="text" class="form-control" >
-                  <option value="">Web development</option>
-                  <option value="">Tech Gadget</option>
-                  <option value="">Business</option>
-                  <option value="">Healh & Willness</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="image">Upload Image</label>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="image">
-                  <label for="image" class="custom-file-label">Choose File</label>
-                </div>
-                <small>Max Size 3mb</small>
-              </div>
-              <div class="form-group">
-                <label for="body">Body</label>
-                <textarea name="editor1" id="" class="form-control"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <buttton class="btn btn-primary" data-dismiss="modal">Save Changes</buttton>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Add Category Modal -->
-    <div class="modal" id="addCategoryModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-success text-white">
-            <h5>Add Category</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form >
-              <label for="title">Title</label>
-              <input type="text" class="form-control">
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-success">Save Changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Add User Modal -->
-    <div class="modal" id="addUserModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-warning text-white">
-            <h5>Add User</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="name">Email</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="name">Password</label>
-                <input type="password" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="name">Confirm Password</label>
-                <input type="password" class="form-control">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-warning">Save Changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
     <section id="body" class="py-4">
       <div class="container">
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md">
             <div class="card ">
               <div class="card-header">
                 <h4>Latest Posts</h4>
@@ -302,39 +186,26 @@
 
                 </tbody>
               </table>
+              <nav class="m-auto">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item ">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
             </div>  
-          </div>
-          <div class="col-md-3">
-            <div class="card bg-primary text-center text-white mb-3">
-              <div class="card-body">
-                <h2>Posts</h2>
-                <h1 class="display-4">
-                  <i class="fas fa-pencil-alt"></i>
-                  6
-                </h1>
-                <a href="#" class="btn btn-outline-light btn-sm">View</a>
-              </div>
-            </div>
-            <div class="card bg-success text-center text-white mb-3">
-              <div class="card-body">
-                <h2>Category</h2>
-                <h1 class="display-4">
-                  <i class="fas fa-folder"></i>
-                  4
-                </h1>
-                <a href="#" class="btn btn-outline-light btn-sm">View</a>
-              </div>
-            </div>
-            <div class="card bg-warning text-center text-white mb-3">
-              <div class="card-body">
-                <h2>Category</h2>
-                <h1 class="display-4">
-                  <i class="fas fa-users"></i>
-                  4
-                </h1>
-                <a href="#" class="btn btn-outline-light btn-sm">View</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
